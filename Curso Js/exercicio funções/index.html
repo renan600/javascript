@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: tomato;
+        }
+        header{
+            color: white;
+            text-align: center;
+            font-size: 2em;
+        }
+        section{
+            background-color: white;
+            min-width:200px;
+            max-width:700px;
+           
+            margin:auto auto 20px auto;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.616);
+            padding: 20px;
+        }
+        section  p{
+            font-size:1.4em;
+        }
+        select{
+            min-width:150px;
+            max-width:200px;
+        }
+        footer{
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            <p>Número entre (1 e 100) <input type="number" name="usuario" id="usuario"> <button type="submit" id="button" value='true'>Adicionar</button></p>
+
+            <select name="select" id="select" size="10"  multiple >
+             
+            </select>
+            
+        </div>
+        <button type="submit" id="finalizar">Finalizar</button>
+        <div id="resultado">
+
+        </div>
+        
+    </section>
+    <footer>
+        <p>&copy; Renan Eduardo Ragazon</p>
+    </footer>
+
+    <script>
+        var botao = window.document.querySelector('button#button')
+        botao.addEventListener('click', clicou)
+        var vetor =[]
+        var usuario = window.document.querySelector('input#usuario')
+        var selecte = window.document.querySelector('select#select')
+        
+       
+        
+        function clicou(){
+        
+        var valor = Number(usuario.value)
+        console.log(valor)
+
+            if(valor == vetor[vetor.indexOf(valor)]){
+                window.alert('Valor invalido , ou já encontra-se adicionado na lista')
+            }else if(valor <= 0 || valor > 100){
+                window.alert('Valor invalido, digite novamente')
+            }
+            else{
+                selecte.innerHTML += (`<option value="">Valor ${valor} Adicionado</option>`)
+                vetor.push(valor)
+               
+            }
+
+            usuario.value = ''
+            usuario.focus()
+            
+        
+        
+        var finalizar = window.document.querySelector('button#finalizar')
+        finalizar.addEventListener('click', finalizou)
+
+          
+        resultado.innerHTML = ''
+        function finalizou(){
+        
+            var finalizar = window.document.querySelector('button#finalizar')
+            var resultado = window.document.querySelector('div#resultado')
+            
+            if(vetor.length == 0){
+                window.alert('Adicione valores antes de finalizar')
+            }else{
+            
+            var maior = Math.max.apply(null, vetor );
+            var menor = Math.min.apply(null, vetor );
+            
+            
+            
+
+            var num = 0
+
+            for(pos  in vetor){
+                num += vetor[pos]
+            }
+
+            var media = (num / vetor.length)
+        
+            resultado.innerHTML = (`<p>Ao todos, temos ${vetor.length} números contabilizados</br></p>`)
+            resultado.innerHTML += (`<p>O maior valor é o ${maior}</br></p>`)
+            resultado.innerHTML += (`<p>O menor valor é o ${menor}</br></p>`)
+            resultado.innerHTML += (`<p>A soma de todos os valores é ${num}</br></p>`)
+            resultado.innerHTML += (`<p>A media dos valores digitados é ${media.toFixed(2)}</br></p>`)
+            
+        }
+       
+        }
+        
+        
+        
+        }
+        
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click em mim</title>
+    <style>
+        input{
+            padding: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            font-weight: bold;
+            border-radius: 50px;
+            box-shadow: 1px 1px 4px black;
+            background-color: tomato;
+        }
+        input:hover{
+            background-color: rgba(255, 99, 71, 0.404);
+        }
+        
+        div#frase{
+            margin-left: 10px;
+            margin-top: 20px;
+            width: 195px;
+            font-size: 1.3em;
+            padding: 10px;
+        }
+
+        div#quadrado{
+            background-color: aqua;
+            width:300px;
+            height:300px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <a href="#" id='teste'><input type="button" value="Click Aqui"></a>
+    <div id="frase"></div>
+    <div id='quadrado'>Teste</div>
+
+    <script>
+        var teste = window.document.querySelector('a#teste')
+        teste.addEventListener('click', clicou)
+        teste.addEventListener('mouseout', sair)
+
+        function clicou(){
+            frase = window.document.querySelector('div#frase')
+            frase.innerHTML = ('Olá , Seja bem vindo ao nosso Site .')
+        }
+        function sair(){
+            frase = window.document.querySelector('div#frase')
+            frase.innerHTML = ('')
+        }
+    </script>
+</body>
+</html>

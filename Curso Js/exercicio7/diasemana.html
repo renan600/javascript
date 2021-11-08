@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dia da semana</h1>
+    <input type="number" name="numero" id="numero">
+    <button type="submit" id="button">Enviar</button>
+    <div id="resul"></div>
+
+    <script>
+        var button = window.document.querySelector('button#button')
+        button.addEventListener('click', clicou)
+
+        function clicou(){
+        var input = window.document.querySelector('input#numero').value
+        var resultado = window.document.querySelector('div#resul')
+        var input = Number(input)
+
+        switch(input){
+            case 0 :
+                resultado.innerHTML = ('domingo')
+                break
+            case 1 :
+                resultado.innerHTML = ('Segunda-feira')
+                break
+            case 2 :
+                resultado.innerHTML = ('Terça-feira')
+                break
+            case 3 :
+                resultado.innerHTML = ('Quarta-feira')
+                break
+            case 4 :
+                resultado.innerHTML = ('Quinta-feira')
+                break
+            case 5 :
+                resultado.innerHTML = ('Sexta-feira')
+                break
+            case 6 :
+                resultado.innerHTML = ('Sábado')
+                break    
+        }
+    }
+    </script>
+</body>
+</html>

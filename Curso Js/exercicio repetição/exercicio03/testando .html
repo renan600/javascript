@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        h1{
+            margin-left: 150px;
+        }
+        button{
+            padding: 20px;
+            font-size: 2em;
+            border-radius: 10px;
+            
+        }
+        div#resultado{
+            margin-top: 20px;
+            margin-left: 130px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contador</h1>
+    <button type="submit" id="incrementar" value="clic">incrementar</button>
+    <button type="submit" id="decrementar" value="click">decrementar</button>
+    <div id="resultado">Contador está com <mark>0</mark> cliques</div>
+    
+       
+        
+  
+    
+
+    <script>
+        var incre$ = window.document.querySelector('button#incrementar')
+        incre$.addEventListener('mouseenter', mais)
+        
+       
+        
+        var c = 0
+        function mais(){
+        var res = window.document.querySelector('div#resultado')
+        
+        
+        c++
+            
+        res.innerHTML=(`Contador está com <mark>${c}</mark> cliques`)
+        }
+        
+        var decre$ = window.document.querySelector('button#decrementar')
+        decre$.addEventListener('click', menos)
+
+        function menos(){
+        var res = window.document.querySelector('div#resultado')
+
+            c--
+
+            res.innerHTML=(`Contador está com <mark>${c}</mark> cliques`)
+        }
+            
+
+                
+
+          
+            
+            
+            
+        
+        
+        
+
+            
+        
+
+    </script>
+
+</body>
+</html>

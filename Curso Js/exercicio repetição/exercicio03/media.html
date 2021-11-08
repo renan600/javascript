@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Media Aluno</title>
+</head>
+<body>
+    <header>
+        <h1>Media do Aluno</h1>
+    </header>
+    <section>
+           
+        <h2>1º Semestre</h2>
+
+        <form id="pri">
+            <table>
+              <tr>
+                <td ><label for="mate">Matemática:</label></td>
+                <td ><input type="number" name="materia" id="mate" placeholder="Digite a nota do aluno" step="0.1" lang="nb"></td>
+              </tr>
+              <tr>
+                <td ><label for="port">Português:</label></td>
+                <td ><input type="number" name="materia" id="port" placeholder="Digite a nota do aluno" step="0.1" lang="nb"></td>
+              </tr>
+              <tr>
+                <td ><label for="quim">Química:</label></td>
+                <td ><input type="number" name="materia" id="quim" placeholder="Digite a nota do aluno" step="0.1" lang="nb"></td>
+              </tr>
+              <tr>
+                <td ><label for="arte">Artes:</label></td>
+                <td ><input type="number" name="materia" id="arte" placeholder="Digite a nota do aluno" step="0.1" lang="nb"></td>
+              </tr>
+              <tr>
+                <td ><label for="edfi">Ed.Fisica:</label></td>
+                <td ><input type="number" name="materia" id="edfi" placeholder="Digite a nota do aluno" step="0.1" lang="nb"></td>
+              </tr>
+              <tr>
+                <td ><label for="filo">Filosofia:</label></td>
+                <td ><input type="number" name="materia" id="filo" placeholder="Digite a nota do aluno" step="0.1" lang="nb"></td>
+              </tr>
+            </table>
+           
+            <input type="button" value="Gerar Relatório" id="p">
+            
+            
+            <p id="primeiro">Preencha os campos a cima , para obter a média!</p>
+          </form>
+          
+
+          <h2>2º Semestre</h2>
+
+          <form id="seg" method="post">
+              <table>
+                <tr>
+                  <td ><label for="mate2">Matemática:</label></td>
+                  <td ><input type="number" name="materia" id="mate2" required placeholder="Digite a nota do aluno" maxlength="2" size="2" ></td>
+                </tr>
+                <tr>
+                  <td ><label for="port2">Português:</label></td>
+                  <td ><input type="number" name="materia" id="port2" placeholder="Digite a nota do aluno"></td>
+                </tr>
+                <tr>
+                  <td ><label for="quim2">Química:</label></td>
+                  <td ><input type="number" name="materia" id="quim2" placeholder="Digite a nota do aluno"></td>
+                </tr>
+                <tr>
+                  <td ><label for="arte2">Artes:</label></td>
+                  <td ><input type="number" name="materia" id="arte2" placeholder="Digite a nota do aluno"></td>
+                </tr>
+                <tr>
+                  <td ><label for="edfi2">Ed.Fisica:</label></td>
+                  <td ><input type="number" name="materia" id="edfi2" placeholder="Digite a nota do aluno"></td>
+                </tr>
+                <tr>
+                  <td ><label for="filo2">Filosofia:</label></td>
+                  <td ><input type="number" name="materia" id="filo2" placeholder="Digite a nota do aluno"></td>
+                </tr>
+              </table>
+              
+              <input type="button" value="Gerar Relatório" id="s">
+              <p id="segundo">Preencha os campos a cima , para obter a média!</p>
+            </form>
+
+            <h2>Media Anual</h2>
+
+            <form id="tre">
+              <p >Media 1º Semestre: <span id="primeirosemestre"></span></p>
+              <p>Media 2º Semestre: <span id="segundosemestre"></span></p>
+              <p id="final">....</p>
+            </form>
+    </section>
+
+   
+    <footer>
+        <p>&copy; Renan Eduardo Ragazon | <a href="#">Linked</a></p>
+    </footer>  
+</body>
+</html>

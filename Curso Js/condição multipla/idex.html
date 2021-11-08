@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+    <style>
+        *{margin: 0px;
+          padding: 0px;
+        }
+        
+        body{
+            font-family: Arial , helvetica , sans-serif;
+        }
+        main{
+            margin: auto;
+            min-width:  290px ;
+            max-width: 1500px;
+        }
+        div#img{
+            height: 900px;
+            background-image: url(team-7-wallpaper-5.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+
+        }
+        div#corpo{
+            margin: auto;
+            border: 3px solid black;
+            min-width:250px ;
+            max-width: 540px;
+            height: 280px;
+            background-image: url(depositphotos_37238347-stock-photo-brazil-flag.jpg);
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size: cover;
+        }
+        h1 , h2 , p {
+            text-align: center;
+            line-height: 1.5em;
+            text-align: center;
+        }
+        p#relatorio{
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+     
+    </style>
+</head>
+<body>
+ 
+    <main>
+        
+        <div id="corpo">
+            <h1>Direitos e Deveres</h1>
+            <h2>Digite sua idade , e descubra sua Obrigação com o sistema Eleitoral Brasileiro!</h2>
+            <p>Digite Sua idade: <input type="text" name="idade" id="idade"> <button id="enviar">Enviar</button></p>
+            <p id="relatorio"></p>
+        </div>
+    </main>
+
+    <script>
+        var botao = window.document.querySelector('button#enviar')
+        botao.addEventListener('click', clicou)
+
+      function clicou(){
+        var usuario = window.document.querySelector('input#idade').value
+        var res = window.document.querySelector('p#relatorio')
+
+        if(usuario < 16){
+            res.innerHTML = ('Não Vota!')
+        }else if(usuario < 18 || usuario >= 65){
+            res.innerHTML = ('Voto Opcional!')
+        }else{
+            res.innerHTML = ('Voto Obrigatório!')
+        }
+
+        }
+
+    </script>
+</body>
+</html>

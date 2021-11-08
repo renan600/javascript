@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Idade</title>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section id="corpo">
+        <div id="corpoum">
+            <p>Ano de Nascimento: <input type="number" name="nascimento" id="nascimento"></p>
+            
+                <fieldset>
+                    <legend>Sexo</legend>
+                        <input type="radio" name="sexo" id="feminino" value="Mulher" >
+                        <label for="feminino">Feminino</label>
+                        <input type="radio" name="sexo" id="masculino" value="Homem" checked >
+                        <label for="masculino">Masculino</label>
+                        
+                </fieldset>
+        
+            <p><button type="submit" id="verificar">Verificar</button></p>
+        </div>
+        <div id="corpodois">
+            <p id="mensagem" >Preencha os dados acima , para ver o resultado!</p> <img id="imagem" src="" alt="">
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Renan Eduardo Ragazon|<a href="#">Linkedin</a></p>
+    </footer>
+</body>
+</html>

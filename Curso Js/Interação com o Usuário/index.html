@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        div#corpo{
+            border: 1px solid black;
+            width: 431px;
+            padding: 10px;
+            background-color: tomato;
+            border-radius: 10px;
+        }
+        div#corpo > h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#resultado{
+            margin: auto;
+            border: 1px solid black;
+            width: 100px;
+            text-align: center;
+            margin-top: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            
+        }
+        input#numero01{
+            
+            border-radius: 5px;
+        }
+        input#numero02{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo">
+        <h1>Multiplicando Valores</h1>
+        <input type="number" name="inp1" id="numero01"> *
+        <input type="number" name="inp2" id="numero02">
+        <input type="button" value="Somar" id="somar">
+        <div id='resultado'>Resultado</div>
+    </div>
+
+    <script>
+        var somar = window.document.querySelector('input#somar')
+        somar.addEventListener('click', clicou)
+        function clicou(){
+            var inp1 = window.document.querySelector('input#numero01').value
+            var inp2 = window.document.querySelector('input#numero02').value
+            var resultado = window.document.querySelector('div#resultado')
+            var n1 = Number(inp1) 
+            var n2 = Number(inp2)
+            var s = n1 * n2 
+            resultado.innerHTML = (`${s}`)
+        }
+    </script>
+</body>
+</html>

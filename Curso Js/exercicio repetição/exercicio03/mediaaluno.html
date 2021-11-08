@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Aluno</title>
+    <style>
+        button{
+            padding:30px;
+            border-radius: 10px;
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+    <button type="submit" id="button">Entrar com as  Nota</button>
+    <div id="resultado">
+        
+    </div>
+
+    <script>
+        var botao = window.document.querySelector('button#button')
+        botao.addEventListener('click', clicou)
+
+        function clicou(){
+            var nome = window.prompt('Qual é o nome do aluno?')
+            var notaum = window.prompt(`Primeira nota de ${nome}:`)
+            var notadois = window.prompt(`Segunda nota de ${nome}:`)
+            var resumo = window.document.querySelector('div#resultado')
+            
+            var nota = Number.parseFloat(notaum)
+            var nota2 = Number.parseFloat(notadois)
+            var total = (nota + nota2) / 2
+           
+            resumo.innerHTML = (`<h1>Analisando a Situação de ${nome}</h1>`)
+            resumo.innerHTML += (`Com as notas ${nota} e ${nota2}, a <strong>média é ${total} </strong></br>`)
+            
+            if(total >6){
+                resumo.innerHTML += ('Com a média acima de 6,0, o aluno está <span style="color:green; ; font-size:1.5em; text-shadow:0px 0px 8px black;"><strong>APROVADO</strong></span>')
+            }else if(total <= 6 && total > 3){
+                resumo.innerHTML += ('Com a média acima de 6,0, o aluno está <span style="color:yellow; ; font-size:1.5em; text-shadow:0px 0px 8px black;"><strong>RECUPERAÇÂO</strong></span>')
+            }else{
+                resumo.innerHTML += ('Com a média acima de 6,0, o aluno está <span style="color:red; ; font-size:1.5em; text-shadow:0px 0px 8px black;"><strong>REPROVADO</strong></span>')
+            }
+
+        }
+    </script>
+</body>
+</html>

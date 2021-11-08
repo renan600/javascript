@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando a media</title>
+</head>
+
+<body>
+    <h1>Permissão para entrada na festa do Exercito</h1>
+    <p>Preencha o formulário</p>
+
+    <script>
+        var sexo = window.prompt('Qual seu "SEXO" : "M" <-Para Masculino ou "F"<-Para Feminino')
+        var sexo = sexo == 'M' || sexo == 'm'?'MASCULINO':'FEMININO'
+        var idade = Number(window.prompt('Digite Sua idade :'))
+        var permissao = idade >= 18 && sexo == 'HOME' ? 'CONCEDIDO':'NEGADO'
+        document.write(`Sexo: ${sexo}</br>`)
+        document.write(`Idade: ${idade}</br>`)
+        document.write(`Acesso: ${permissao}`)
+
+        /*
+        var n1 = Number(window.prompt('Digite Um valor :'))
+        var n2 = Number(window.prompt('Digite um valor :'))
+        n1 + n2 > 50?window.alert('TRUE'):window.alert('FALSE')
+        document.write(`Vamos Fazer um teste : ${teste}`)
+        /*
+        var mate = Number(window.prompt('Media Matemática: '))
+        var port = Number(window.prompt('Media Português: '))
+        var ingl = Number(window.prompt('Media Inglês: '))
+        var edfi = Number(window.prompt('Media Ed.Física'))
+
+        document.write(`Matéria Matemática:${mate} : ${mate >= 7.0?'APROVADO' : 'REPROVADO'}</br>`)
+        document.write(`Matéria Português:${port} : ${port >= 7.0?'APROVADO' : 'REPROVADO'}</br>`)
+        document.write(`Matéria Inglês:${ingl} : ${ingl >= 7.0?'APROVADO' : 'REPROVADO'}</br>`)
+        document.write(`Matéria Ed.Física:${edfi} : ${edfi >= 7.0?'APROVADO' : 'REPROVADO'}</br>` )
+        */
+    </script>
+</body>
+</html>

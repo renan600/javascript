@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(255, 255, 0, 0.493);
+        }
+        header{
+            text-align: center;
+            
+        }
+        section{
+            min-height:240px;
+            max-width:410px;
+            margin:auto;
+            background-color:white;
+            border-radius:10px;
+            padding:20px;
+            border: 1px solid black;
+        }
+        fieldset{
+            width: 210px;
+        }
+        p#resultado{
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        footer{
+            text-align: center;
+            padding: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div id="estrutura">
+            <p><label for="numero00">Numero:</label> <input required type="number" name="numero" id="numero00" placeholder="Digite um numero"></p>
+            <p id="emoji">&#x2754;</p>
+            <p><label for="numero01">Numero:</label> <input  required type="number" name="numero" id="numero01" placeholder="Digite um numero"></p>
+            <p><button type="submit" id="button">Gerar calculo</button></p>
+            
+                <fieldset>
+                    <legend>Matemática</legend>
+                    <input type="radio" name="calculadora" id="mais" checked>
+                    <label for="mais">&#x2795;</label>
+                    <input type="radio" name="calculadora" id="veses">
+                    <label for="veses">✖️</label>
+                    <input type="radio" name="calculadora" id="dividir">
+                    <label for="dividir">&#x2797;</label>
+                    <input type="radio" name="calculadora" id="menos">
+                    <label for="menos">&#x2796;</label>
+                </fieldset>
+            
+            
+        </div>
+        <div>
+            <p id="resultado">Gerar Calculo</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Renan Eduardo Ragazon | <a href="#">Linked</a></p>
+    </footer>  
+    <script>
+        var button = window.document.querySelector('button#button')
+        button.addEventListener('click', clicou)
+
+        function clicou(){
+
+            var numero00 = window.document.querySelector('input#numero00').value
+            var numero00 = Number(numero00)
+            var numero01 = window.document.querySelector('input#numero01').value
+            var numero01 = Number(numero01)
+            var resultado = window.document.querySelector('p#resultado')
+            var emoji = window.document.querySelector('p#emoji')
+
+            var checado = window.document.getElementsByName('calculadora')
+
+            if (numero00 == '' || numero01 == ''){
+                resultado.innerHTML = ('Por favor Preencha os campos a Cima!')
+                window.alert('Valores não encontrado!')
+            }else if(checado[0].checked){
+
+                var total = numero00 + numero01
+                resultado.innerHTML= (`${total.toFixed(0)}`)
+                resultado.style.fontSize = ('2em')
+                emoji.innerHTML = (`&#x2795;`)
+            }else if(checado[1].checked){
+
+                var total = numero00 * numero01
+                resultado.innerHTML= (`${total.toFixed(0)}`)
+                resultado.style.fontSize = ('2em')
+                emoji.innerHTML = (`✖️`)
+            }else if(checado[2].checked){
+
+                var total = numero00 / numero01
+                resultado.innerHTML= (`${total.toFixed(0)}`)
+                resultado.style.fontSize = ('2em')
+                emoji.innerHTML = (`&#x2797;`)
+            }else if(checado[3].checked){
+
+                var total = numero00 - numero01
+                resultado.innerHTML= (`${total.toFixed(0)}`)
+                resultado.style.fontSize = ('2em')
+                emoji.innerHTML = (`&#x2796;`)
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

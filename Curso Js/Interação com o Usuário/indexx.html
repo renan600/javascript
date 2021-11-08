@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#corpo{
+            border: 2px solid black;
+            width: 445px;
+            padding: 10px;
+            background-color: blueviolet;
+        }
+        input{
+            border-radius: 5px;
+            padding: 5px;
+        }
+        input#nome{
+            margin-left:70px;
+        }
+        input#idade{
+            margin-left: 72px;
+        }
+        input#cidade{
+            margin-left: 63px;
+        }
+        div#relatorio{
+            border: 1px solid black;
+            margin-top: 10px;
+            width: 420px;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div id="corpo">
+        <h1>Inscrição para o Enem 2021</h1>
+        <p><strong>Nome:</strong> <input type="text" name="nome" id="nome"></p>
+        <p><strong>Idade: </strong><input type="number" name="idade" id="idade"></p>
+        <p><strong>Sexo [M] ou [F]: </strong><input type="text" id="sexo"></p>
+        <p><strong>Cidade: </strong><input type="text" name="cidade" id="cidade" id="cidade"></p>
+        <input type="button" value="Enviar" id="enviar">
+
+        <div id="relatorio"></div>
+
+    </div>
+    
+
+    <script>
+
+        var enviar = window.document.querySelector("input#enviar")
+        enviar.addEventListener('click', clicou)
+
+            
+        function clicou(){
+            var nome = window.document.querySelector('input#nome').value
+            var idade = window.document.querySelector('input#idade').value
+            var sexo = window.document.querySelector('input#sexo').value
+            var idade = Number(idade)
+            var rela = window.document.querySelector('div#relatorio')
+
+            teste = idade >= 18 ?'Um sucesso.':'Negada , idade não permitido!.'
+
+            rela.innerText=(`Olá , ${nome} , sua inscrição foi : ${teste} `)
+            
+        }
+
+
+    </script>
+</body>
+</html>

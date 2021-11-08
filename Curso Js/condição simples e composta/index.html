@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input#velo{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DETRAN</h1>
+    <p>Velocidade do carro: <input type="number" name="velo" id="velo"> <strong>Km/h</strong></p>
+    <input type="button" value="enviar" id="enviar">
+    
+    <div id="resultado"></div>
+    <script>
+        var enviar = window.document.querySelector('input#enviar')
+        enviar. addEventListener('click', clicou)
+        
+        function clicou(){
+            var resultado = window.document.querySelector('input#velo').value
+            var div = window.document.querySelector('div#resultado')
+
+            var vel = Number(resultado)
+
+            div.innerHTML = (`<p>Sua velocidade atual é de <strong>${vel} km/h</strong></p>`)
+
+            if(vel > 60){
+                div.innerHTML +=(`<p>Você Ultrapassou a velocidade permitida , <strong>MULTADO</strong></p>`)
+            }
+        }
+        
+    </script>
+</body>
+</html>

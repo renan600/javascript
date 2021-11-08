@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Dados</title>
+</head>
+<body>
+    <script>
+        var nome ='Renan Eduardo';
+        var idade = 23;
+        var cidade ='Matelândia';
+        var nota = 7.9;
+        /*
+        var n1 = Number(window.prompt('Digite um valor: ')); //conversão da String , para numero inteiro //
+        var n2 = Number(window.prompt('Digite um valor: ')); //conversão da String , para numero real //
+        var soma = n1 + n2 ;
+        window.alert('A soma dos valores é ' + soma + '!') //Usando concatenação//
+        window.alert(`A soma de ${n1} + ${n2} é ${soma}`) //Usando Template Strings//
+
+        window.alert('O aluno ' + nome ) //Concatenação//
+        window.alert(`O aluno ${nome}`)//Template Strings//
+        */
+        var nome = window.prompt('Digite seu nome e veja de quantas letras ele é composto.')
+        window.alert(`Olá ${nome} , seu nome tem ${nome.length} siglas`)
+        window.alert(`Olá ${nome} , seu nome em MAISCULO: ${nome.toUpperCase()}`)
+        window.alert(`Olá ${nome} , seu nome em minusculo: ${nome.toLowerCase()}`)
+
+    </script>
+</body>
+</html>

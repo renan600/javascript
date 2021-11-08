@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Funções</h1>
+
+    <form action="">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <table>
+                    <tr>
+                        <td><label for="nome">Nome:</label></td>
+                        <td><input type="text" name="numeros" id="nome" placeholder="Digite aqui.."></td>
+            
+                    </tr>
+                    <tr>
+                        <td><label for="idade">Idade:</label></td>
+                        <td><input type="number" name="numeros" id="idade" placeholder="Digite aqui.."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cidade">Cidade:</label></td>
+                        <td><input type="text" name="numeros" id="cidade" placeholder="Digite aqui.."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="estado">Estado:</label></td>
+                        <td><input type="text" name="numeros" id="estado" placeholder="Digite aqui.."></td>
+                    </tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="fem" value="Masculino" checked><label for="fem">Masculino</label>
+            <input type="radio" name="sexo" id="mas" value="Feminino"><label for="mas">Feminino</label>
+        </fieldset>
+    </form>
+
+    <button type="submit" id="botao">Enviar</button>
+    <p id="erro"></p>
+    <p id="resposta"></p>
+
+    <script>
+
+    
+
+       
+        var botao = window.document.querySelector('button#botao')
+
+        botao.addEventListener('click', clicou)
+
+        
+
+        function clicou(){
+        var n1 = window.document.querySelector('input#nome').value
+        var n2 = window.document.querySelector('input#idade').value
+        var n3 = window.document.querySelector('input#cidade').value
+        var n4 = window.document.querySelector('input#estado').value
+        
+        var sexo = window.document.getElementsByName('sexo')
+
+        
+        var res = window.document.querySelector('p#resposta')
+        var erro = window.document.querySelector('p#erro')
+
+        
+        if(sexo[0].checked){
+            n5 = ('Masculino')
+        }else if(sexo[1].checked){
+            n5 = ('Feminino')
+        }
+        
+
+
+        
+        let usuario = [n1 , Number(n2) , n3 , n4 , n5]
+
+        
+        res.innerHTML = (``)
+        if(n1.length == 0 || n2.length == 0 || n3.length == 0 || n4.length == 0 || n5.length == 0){
+            erro.innerHTML =(`ERRO: Preencha todo o  formulário a cima !`)
+            res.innerHTML = (``)
+
+        }else{
+
+            for(var pos in usuario){
+                erro.innerHTML = (``)
+                res.innerHTML += (`${usuario[pos]}</br>`)
+            }
+        
+        }
+    }
+    
+        
+    
+    </script>
+</body>
+</html>
