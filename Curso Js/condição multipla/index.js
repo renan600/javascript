@@ -1,2 +1,0 @@
-var idade = 18 
-
