@@ -35,9 +35,9 @@
     <li>
     <a href="https://renan600.github.io/verificador/" target="_blank" rel="external" >Simulando um Verificador de idade</a>
     </li>
-    <a href="https://renan600.github.io/sistema-votacao/" target="_blank" rel="external" >Simulando um Sistema de votação</a>
+    <li><a href="https://renan600.github.io/sistema-votacao/" target="_blank" rel="external" >Simulando um Sistema de votação</a>
     </li>
-    <a href="https://renan600.github.io/calculo-imc/" target="_blank" rel="external" >Calculando o Imc(Índice de massa corporal)</a>
+    <li><a href="https://renan600.github.io/calculo-imc/" target="_blank" rel="external" >Calculando o Imc(Índice de massa corporal)</a>
     </li>
 
 </ul>
