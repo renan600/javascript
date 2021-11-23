@@ -27,6 +27,9 @@
     <li>
     <a href="https://renan600.github.io/javascript/exercicio007/index.html" target="_blank" rel="external" >Criando tabela com dados</a>
     </li>
+    <li>
+    <a href="https://renan600.github.io/javascript/exercicio008/index.html" target="_blank" rel="external" >Temporizador</a>
+    </li>
 </ul>
 
 <h2>Projetos Utilizando Js , Html e Css</h2>
