@@ -41,8 +41,10 @@
         }
         
         #res{
+            position: relative;
+            top:30%;
             text-align: center;        
-            font-size:14em;
+            font-size:5em;
             margin: 0px;
             font-family: Arial, Helvetica, sans-serif;
             text-shadow: 0px 0px 8px white;
@@ -70,10 +72,12 @@
     btn.addEventListener('click', ()=>{
    
 
-    if(usuario.value == 0){
+    if(usuario.value == 0 ){
 
-        alert('Digite um valor para iniciar')
+        alert('Digite um valor para iniciar!')
 
+    }else if( usuario.value > 9999999){
+        alert('Valor muito alto para essa execução!')
     }else{
 
     setInterval(temporizador ,1000)
