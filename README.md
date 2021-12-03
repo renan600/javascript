@@ -45,6 +45,8 @@
     </li>
     <li><a href="https://renan600.github.io/calculo-imc/" target="_blank" rel="external" >Calculando o Imc(Índice de massa corporal)</a>
     </li>
+     <li><a href="https://renan600.github.io/barbearia/" target="_blank" rel="external" >Site Simulando uma barbearia</a>
+    </li>
 
 </ul>
 
